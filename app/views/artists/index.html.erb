@@ -1,0 +1,14 @@
+<h1><%= @song.title %>: Artists</h1>
+<%= link_to 'Add Artist', new_song_artist_path(@song) %>
+<hr/>
+
+<h2>Artist</h2>
+<ul>
+    <% @artists.each do |artist| %>
+        <li>
+            <%= artist.billboard.title %>
+            <br/>
+            <%= link_to 'Remove', song_artist_path(@song, artist), method: :delete %>
+        </li>
+    <% end %>
+</ul>

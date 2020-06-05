@@ -1,0 +1,14 @@
+<h1><%= @billboard.title %></h1>
+<hr/>
+<h2>Songs</h2>
+<ul>
+    <% @billboard.songs.each do |song| %>
+        <li>
+            <%= link_to song.title, song %>
+        </li>
+    <% end %>
+</ul>
+<br/>
+<br/>
+<br/>
+<%= link_to 'Delete Billboard', @billboard, method: :delete, class: "ui red button inverted" %>

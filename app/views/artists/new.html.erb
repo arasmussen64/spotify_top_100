@@ -1,0 +1,7 @@
+<h1>Add Artist</h1>
+<%= form_with(model: [@song, @artist], local: true, class: "ui form" ) do |f| %>
+    <%= f.label :billboard %>
+    <%# f.select :billboard_id, @billboards.collect { |u| [u.title, u.id] } %>
+    <br/>
+    <%= f.submit nil, class: "ui green button inverted" %>
+<% end %>

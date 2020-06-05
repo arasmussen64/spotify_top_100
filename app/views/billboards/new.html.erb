@@ -1,0 +1,8 @@
+<h1>Add Billboard</h1>
+<%= form_with(model: @billboard, local: true, class: "ui form" ) do |f| %>
+    <div class = "field">
+        <%= f.label :title %>
+        <%= f.text_field :title, required: true, autofocus: true, placeholder: "Billboard Title" %>
+    </div>
+    <%= f.submit nil, class: "ui green button inverted" %>
+<% end %>
